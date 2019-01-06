@@ -11,6 +11,8 @@ Dans ce fichier décrivez bien chacune des étapes et si vous voulez détailler 
 
 ## Description du Projet
 
+Le sujet initial est dans le fichier [sujet.md](sujet.md)
+Vous devez décrire ici les fonctionnalités et applications de la maquette que vous avez décidé d'implementer.
 ### Capteurs
 
 ### Cas d'utilisation
