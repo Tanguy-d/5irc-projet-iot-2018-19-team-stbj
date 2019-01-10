@@ -28,11 +28,11 @@ Les Arduino utilisés sont des Arduino Mega click shield. L'avantage de ces dern
 Tout d'abord, afin que votre ordinateur puisse reconnaitre le BeagleBone, il faut installer les drivers adéquates. 
 
 Nous vous conseillons de suivre le tutoriel d'installation sur le site http://beagleboard.org/getting-started. 
-Une fois les drivers installés, nous devions flashé notre carte SD contenant l'OS de l'appareil. Pour cela, nous avons utilisé BalenaEtcher qui est disponible sur tous les OS. 
+Une fois les drivers installés, nous devions flashé notre carte SD contenant l'OS de l'appareil. Pour cela, nous avons utilisé Etcher qui est disponible sur tous les OS. 
 
-Maintenant que votre Beaglebone est bien configuré, nous vous conseillons de télécharger la version Debian 8.6 (beaglebone-debian-8.6-iot-armhf-2016-12-09-4gb.img).
+Maintenant que votre Beaglebone est bien connecté, nous vous conseillons de télécharger la version Debian 8.6 (beaglebone-debian-8.6-iot-armhf-2016-12-09-4gb.img).
 
-Vous pouvez maintenant connecté votre Beaglebone en USB sur votre ordinateur. A ce moment la, allez dans vos périphériques réseaux et normalement, une deuxième carte réseau s'est montée. 
+Vous pouvez maintenant connecté votre Beaglebone en USB sur votre ordinateur. A ce moment la, allez dans vos périphériques réseaux et une deuxième carte réseau s'est montée. 
 
 Activez le partage de votre connexion internet sur cette carte, et configurez la pour qu'elle soit dans le meme réseau que votre Beaglebone. 
 
@@ -66,7 +66,7 @@ NB : pensez bien à configurer le DNS sur votre carte Ethernet dans votre PC (aj
 B) Configuration des pins 
 
 Pour commencer, nous avons besoin  d'activer les ports UART. 
-Pour cela, éditer le fichier /boot/uEnv.txt et modifier la ligne suivante :
+Pour cela, éditer le fichier /boot/uEnv.txt et ajoutez la ligne suivante :
 
 cape_enable=bone_capemgr.enable_partno=BB-UART1,BB-UART2,BB-UART4,BB-UART5 
 
