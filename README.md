@@ -1,11 +1,11 @@
 # Projet IoT
 
-Dans ce repertoire vous allez enregistrez les démarches que votre équipe suit
-pour mettre en place une chaîne IoT fonctionnel.
+Ce projet a pour but de créer le système d'une montre connectée qui quand elle sera au poignet d'une personne servira à faire des relevés de taux de CO2 via un système de géolocalisation GPS. 
+Ces données seront alors envoyées et mise en forme pour analyse et des actions pourront être réalisées pour faire baisser le taux de polution. 
 
-Dans les fichiers `README.md` vous devez décrire en format Markdown chacune des étapes, pensez bien à la répartition des tâches dans votre équipe et si besoin créez d'autres repertoires.
-
-Dans ce fichier décrivez bien chacune des étapes et si vous voulez détailler plus, utilisez des sous-dossiers.
+Comment va s'orgniser notre projet cette semaine, pour rappel, les trois principales composantes d'un système IoT sont :
+Capteurs --> Passerelles --> Cloud
+Dans le rôle de capteurs, nous aurons un capteur de CO2 et une balise GPS connectés sur un Arduino. Ce dernier transmettra ces données via ZigBee sur un autre Arduino qui fera la passerelle vers notre BigleBone. Le BBB se chargera de faire la passerelle vers Ubidots qui est la plateforme Cloud que nous avons choisit d'utiliser. 
 
 ## Équipe
 
