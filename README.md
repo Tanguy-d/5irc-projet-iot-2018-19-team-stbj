@@ -38,7 +38,6 @@ Télécharger également les librairies :
 -	« SoftwareSerial.h » (utilisé par Adafruit)
 -	« structureGPS.h » (librairie crée par nous-même pour l’implémentation du code) 
 
-
 Dans le fichier Arduino_envoi qui est le code principal pour l’envoi des données, de nombreuses librairies sont importées. Il faut également le faire dans l’IDE afin de créer un schéma correct et complet. Pour se faire cliquer sur :
 
 Croquis > importer bibliothèque > Add library > Ajouter le fichier ZIP à importer
