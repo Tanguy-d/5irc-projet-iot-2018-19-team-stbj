@@ -9,7 +9,7 @@ Ces données seront alors envoyées et mise en forme pour analyse et des actions
 
 Voici l’organisation de notre projet cette semaine, pour rappel, les trois principales composantes d'un système IoT sont :
 Capteurs --> Passerelles --> Cloud
-Dans le rôle de capteurs, nous aurons un capteur de CO2 et une balise GPS connectés sur un Arduino. Ce dernier transmettra ces données via ZigBee sur un autre Arduino qui fera la passerelle vers notre BigleBone. Le BBB se chargera de faire la passerelle vers Ubidots qui est la plateforme Cloud que nous avons choisit d'utiliser.
+Dans le rôle de capteurs, nous aurons un capteur de CO2 et une balise GPS connectés sur un Arduino. Ce dernier transmettra ces données via ZigBee sur un autre Arduino qui fera la passerelle vers notre BeagleBone. Le BBB se chargera de faire la passerelle vers Ubidots qui est la plateforme Cloud que nous avons choisit d'utiliser.
 
 ### Matériel utilisé 
 
@@ -25,14 +25,14 @@ Les Arduino utilisés sont des Arduino Mega click shield. L'avantage de ces dern
 
 1 - Connexion au BeagleBone 
 
-Tout d'abord, afin que votre ordinateur puisse reconaitre le BeagleBone, il faut installer les drivers adéquates. 
+Tout d'abord, afin que votre ordinateur puisse reconnaitre le BeagleBone, il faut installer les drivers adéquates. 
 
 Nous vous conseillons de suivre le tutoriel d'installation sur le site http://beagleboard.org/getting-started. 
 Une fois les drivers installés, nous devions flashé notre carte SD contenant l'OS de l'appareil. Pour cela, nous avons utilisé BalenaEtcher qui est disponible sur tous les OS. 
 
 Maintenant que votre Beaglebone est bien configuré, nous vous conseillons de télécharger la version Debian 8.6 (beaglebone-debian-8.6-iot-armhf-2016-12-09-4gb.img).
 
-Vous pouvez miantenant connecté votre Beaglebone en USB sur votre ordinateur. A ce moment la, allez dans vos périphériques réseaux et normalement, une deuxième carte réseau s'est montée. 
+Vous pouvez maintenant connecté votre Beaglebone en USB sur votre ordinateur. A ce moment la, allez dans vos périphériques réseaux et normalement, une deuxième carte réseau s'est montée. 
 
 Activez le partage de votre connexion internet sur cette carte, et configurez la pour qu'elle soit dans le meme réseau que votre Beaglebone. 
 
@@ -73,7 +73,7 @@ cape_enable=bone_capemgr.enable_partno=BB-UART1,BB-UART2,BB-UART4,BB-UART5
 et supprimez : 
 cape_universal=enable 
 
-et redémarrez votre BBB car comme ce fichier est un fichier système, le BBB ne le prendra en compte que lors du rédmarrage. 
+et redémarrez votre BBB : ce fichier est un fichier système, le BBB ne le prendra en compte que lors du rédémarrage. 
 
 Vérifications :
 
@@ -93,7 +93,7 @@ Vérifiez que les ttyO sont identifiés:
 root@beaglebone:/dev# ls ttyO*
 /dev/ttyO0  /dev/ttyO1 /dev/ttyO2 /dev/ttyO4  /dev/ttyO5
 
-Les ports sont maintenant pret à etre utilisés, dans notres cas, nous utiliserons que les UART1 et UART2. 
+Les ports sont maintenant prêts à être utilisés, dans notre cas, nous utiliserons que les UART1 et UART2. 
 
 C) Interconnexion physique 
 
