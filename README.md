@@ -47,7 +47,6 @@ Suite à cela, un dossier « Sketchbook » est créé dans votre répertoire per
 
 Ensuite dans le code il faut adapter les lignes, notamment pour l’initialisation des variables. Il faut changer le nom de la Serial si vos modules ne sont pas branchés sur les mêmes que nous (voir dossier images : arduino_envoi). Dans notre cas il s’agit de : Serial3
 
-
 -----------------------------------------------Arduino relais-------------------------------------------------------
 
 Le but de cette arduino est de faire le relais entre l'arduino qui va récupérer les données des capteurs et le beaglebone, qui va lui se charger de les envoyer au cloud.
