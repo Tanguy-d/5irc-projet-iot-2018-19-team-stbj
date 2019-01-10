@@ -19,6 +19,14 @@ Les Arduino utilisés sont des Arduino Mega click shield. L'avantage de ces dern
 
 ## Procédure de mise en place de votre chaîne IoT
 
+Partie capteur : 
+
+Partie BeagleBone :
+
+
+
+Partie Cloud : 
+
 
 
 
