@@ -48,6 +48,7 @@ Ensuite dans le code il faut adapter les lignes, notamment pour l’initialisati
 
 -----------------------------------------------Arduino relais-------------------------------------------------------
 
+
 Le but de cette arduino est de faire le relais entre l'arduino qui va récupérer les données des capteurs et le beaglebone, qui va lui se charger de les envoyer au cloud.
 Sur cet Arduino sera donc positionné deux partie. La partie module Xbee, ainsi que la partie liaison série avec le beaglebone.
 
