@@ -114,7 +114,11 @@ minicom -D /dev/ttyO2 -b 9600
 
 Deux terminal s'ouvrent alors. Si les ports sont montés, vous pourrez écrire dans le premier et cette écriture se répercutera dans le second. 
 
-Partie Cloud : 
+----------------------------------------------Cloud --> Ubidots---------------------------------------------------------
+
+Nous allons maintenant afficher les données sur le Cloud. 
+
+Pour cela, veuillez vous connecter sur https://industrial.ubidots.com/app/dashboards/5c35cd8f1d84724f468bcd03. 
 
 
 
