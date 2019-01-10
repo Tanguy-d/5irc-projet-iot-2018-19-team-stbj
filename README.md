@@ -74,6 +74,7 @@ et supprimez :
 cape_universal=enable 
 
 et redémarrez votre BBB : ce fichier est un fichier système, le BBB ne le prendra en compte que lors du rédémarrage. 
+NB : Vérifiez que la connexion internet est toujours présente. Dans le cas contraire, répéter les actions du 1-. 
 
 Vérifications :
 
