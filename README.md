@@ -19,11 +19,11 @@ Les Arduino utilisés sont des Arduino Mega click shield. L'avantage de ces dern
 
 ## Procédure de mise en place de votre chaîne IoT
 
-Partie capteur : 
+-----------------------------------------------Capteur --> Arduino-------------------------------------------------------
 
 ---------------------------------------------Passerelle --> BeagleBone--------------------------------------------------- 
 
-1 - Connexion au BeagleBone :
+1 - Connexion au BeagleBone 
 
 Tout d'abord, afin que votre ordinateur puisse reconaitre le BeagleBone, il faut installer les drivers adéquates. 
 
@@ -65,25 +65,13 @@ NB : pensez bien à configurer le DNS sur votre carte Ethernet dans votre PC (aj
 
 B) Configuration des pins 
 
+Pour commencer, nous avons besoin  d'activer les ports UART. 
+Pour cela, éditer le fichier /boot/uEnv.txt et modifier la ligne suivante :
 
+cape_enable=bone_capemgr.enable_partno=BB-UART1,BB-UART2,BB-UART4,BB-UART5 
 
+et désactiver votre 
 
-, il faut :
-
-Désactiver le HDMI qui utilise les mêmes pins que SPI.
-Activer le SPI
-Activer les ports série UART
-Pour cela, éditer le fichier /boot/uEnv.txt pour n'y garder que les lignes suivantes:
-
-cat /boot/uEnv.txt
-...
-cmdline=coherent_pool=1M quiet net.ifnames=0 cape_universal=enable
-#DISABLE HDMI AND ENABLE SPI
-cape_disable=bone_capemgr.disable_partno=BB-BONELT-HDMI,BB-BONELT-HDMIN
-cape_enable=bone_capemgr.enable_partno=BB-SPIDEV0,BB-SPIDEV1
-#ENABLE UART
-cape_enable=bone_capemgr.enable_partno=BB-UART1,BB-UART2,BB-UART4,BB-UART5
-...
 et redémarrez votre BBB car comme ce fichier est un fichier système, le BBB ne le prendra en compte que lors du rédmarrage. 
 
 Vérifications :
@@ -94,19 +82,19 @@ root@beaglebone:/sys/devices/platform/bone_capemgr# less slots
  1: PF----  -1 
  2: PF----  -1 
  3: PF----  -1 
- 4: P-O-L-   0 Override Board Name,00A0,Override Manuf,BB-SPIDEV0
- 5: P-O-L-   1 Override Board Name,00A0,Override Manuf,BB-SPIDEV1
- 6: P-O-L-   2 Override Board Name,00A0,Override Manuf,BB-UART1
- 8: P-O-L-   3 Override Board Name,00A0,Override Manuf,BB-UART4
- 9: P-O-L-   4 Override Board Name,00A0,Override Manuf,BB-UART5
-2.Vérifiez que les bus SPI sont identifiés:
+ 4: P-O-L-   1 Override Board Name,00A0,Override Manuf,BB-UART1
+ 5: P-O-L-   0 Override Board Name,00A0,Override Manuf,BB-UART2
+ 6: P-O-L-   2 Override Board Name,00A0,Override Manuf,BB-UART4
+ 7: P-O-L-   3 Override Board Name,00A0,Override Manuf,BB-UART5
+ 
+Vérifiez que les ttyO sont identifiés:
 
-root@beaglebone:/dev# ls spidev*
-spidev1.0  spidev1.1  spidev2.0  spidev2.1
-root@beaglebone:/dev# ls i2c-*
-i2c-0  i2c-2
 root@beaglebone:/dev# ls ttyO*
-/dev/ttyO0  /dev/ttyO1  /dev/ttyO4  /dev/ttyO5
+/dev/ttyO0  /dev/ttyO1 /dev/ttyO2 /dev/ttyO4  /dev/ttyO5
+
+Les ports sont maintenant pret à etre utilisés, dans notres cas, nous utiliserons que les UART1 et UART2. 
+
+C) Interconnexion physique 
 
 
 
