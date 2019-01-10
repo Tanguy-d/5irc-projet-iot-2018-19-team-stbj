@@ -70,14 +70,15 @@ Pour cela, éditer le fichier /boot/uEnv.txt et modifier la ligne suivante :
 
 cape_enable=bone_capemgr.enable_partno=BB-UART1,BB-UART2,BB-UART4,BB-UART5 
 
-et désactiver votre 
+et supprimez : 
+cape_universal=enable 
 
 et redémarrez votre BBB car comme ce fichier est un fichier système, le BBB ne le prendra en compte que lors du rédmarrage. 
 
 Vérifications :
 
 Vérifier que les slots sont identifiés:
-root@beaglebone:/sys/devices/platform/bone_capemgr# less slots
+root@beaglebone:/sys/devices/platform/bone_capemgr# cat slots
  0: PF----  -1 
  1: PF----  -1 
  2: PF----  -1 
@@ -96,7 +97,21 @@ Les ports sont maintenant pret à etre utilisés, dans notres cas, nous utiliser
 
 C) Interconnexion physique 
 
+Nous allons maintenant connecter physiquement les ports UART sur le BeagleBone pour vérifier qu'ils sont bien utilisables. 
+Nous allons connecter :  UART1 TXD (P9_24) à UART2 RXD (P9_22) et UART2 TXD (P9-21) à UART1 RXD (P9_26). 
 
+D) Vérification avec Minicom
+
+Ensuite, installez minicom : 
+
+sudo apt-get update 
+sudo apt-get install minicom
+
+En root : 
+minicom -D /dev/ttyO1 -b 9600 
+minicom -D /dev/ttyO2 -b 9600
+
+Deux terminal s'ouvrent alors. Si les ports sont montés, vous pourrez écrire dans le premier et cette écriture se répercutera dans le second. 
 
 Partie Cloud : 
 
