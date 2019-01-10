@@ -1,6 +1,6 @@
 # Projet IoT
 
-Ce projet a pour but de créer le système d'une montre connectée qui quand elle sera au poignet d'une personne servira à faire des relevés de taux de CO2 via un système de géolocalisation GPS. 
+Ce projet a pour but de créer le système d'une montre connectée, qui servira à faire des relevés de taux de CO2 via un système de géolocalisation GPS. 
 Ces données seront alors envoyées et mise en forme pour analyse et des actions pourront être réalisées pour faire baisser le taux de polution. 
 
 Comment va s'orgniser notre projet cette semaine, pour rappel, les trois principales composantes d'un système IoT sont :
