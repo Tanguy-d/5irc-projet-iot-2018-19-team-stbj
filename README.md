@@ -21,7 +21,6 @@ Les Arduino utilisés sont des Arduino Mega 2560 click shield. L'avantage de ces
 
 -----------------------------------------------Capteur --> Arduino-------------------------------------------------------
 
-
 1.	Arduino émission
 
 Sur l’arduino seront positionnés différents capteurs afin de transmettre au second arduino les données.
