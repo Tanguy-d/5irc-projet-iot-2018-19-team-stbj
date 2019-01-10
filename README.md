@@ -15,7 +15,7 @@ Dans le rôle de capteurs, nous aurons un capteur de CO2 et une balise GPS conne
 
 Le capteur C02 utilisé pour ce projet est le MQ-135 sensor. 
 La balise GPS est une GPS3 click. 
-Les Arduino utilisés sont des Arduino Mega click shield. L'avantage de ces derniers est qu'ils possèdent plusieurs sérial qui permettent la connexion de trois capteurs par Arduino. 
+Les Arduino utilisés sont des Arduino Mega 2560 click shield. L'avantage de ces derniers est qu'ils possèdent plusieurs sérial qui permettent la connexion de trois capteurs par Arduino. 
 
 ## Procédure de mise en place de votre chaîne IoT
 
