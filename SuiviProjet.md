@@ -9,18 +9,20 @@ Notre équipe est composée de 4 personnes : Tanguy DUMAS, Jérémy SANZ, Benoit
 
 ## Description du Projet
 
-Comment va s'orgniser notre projet cette semaine, pour rappel, les trois principales composantes d'un système IoT sont :
+Voici l'orgnisation de notre projet cette semaine, pour rappel, les trois principales composantes d'un système IoT sont :
 Capteurs --> Passerelles --> Cloud
 Dans le rôle de capteurs, nous aurons un capteur de CO2 et une balise GPS connectés sur un Arduino. Ce dernier transmettra ces données via ZigBee sur un autre Arduino qui fera la passerelle vers notre BigleBone. Le BBB se chargera de faire la passerelle vers Ubidots qui est la plateforme Cloud que nous avons choisit d'utiliser.
 
-### Capteurs
-
-### Cas d'utilisation
-
 ## Répartition des tâches
+
+Nous nous sommes répartis les tâches de la façon suivante : 
 
 ### Suivi journalier 
 
-## Procédure de mise en place de votre chaîne IoT
+Jour 1 : 
+Jour 2 : 
+Jour 3 : 
+Jour 4 : 
+Jour 5 : 
 
 ## Conclusions et recommandations
