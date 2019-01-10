@@ -114,12 +114,19 @@ minicom -D /dev/ttyO2 -b 9600
 
 Deux terminal s'ouvrent alors. Si les ports sont montés, vous pourrez écrire dans le premier et cette écriture se répercutera dans le second. 
 
+E) StartGateway 
+
+Pour initier la communication entre le BeagleBone et le cloud, nous avons mis à disposition le fichier startgateway.py. 
+Les seules choses à changer sont la variable "Token" (cf partie suivante). 
+
+
 ----------------------------------------------Cloud --> Ubidots---------------------------------------------------------
 
 Nous allons maintenant afficher les données sur le Cloud. 
 
-Pour cela, veuillez vous connecter sur https://industrial.ubidots.com/app/dashboards/5c35cd8f1d84724f468bcd03. 
+Pour cela, veuillez vous connecter sur https://industrial.ubidots.com/. 
 
+Il faut créer un compte. Ensuite, il faut récupérer le token qui représente l'identifiant unique de votre compte et vous devrez placer cette suite de caractère dans la variable "Token" du fichier startgateway.py. 
 
 
 
