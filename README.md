@@ -23,7 +23,7 @@ Partie capteur :
 
 ---------------------------------------------Passerelle --> BeagleBone--------------------------------------------------- 
 
-Connexion du BeagleBone :
+1 - Connexion au BeagleBone :
 
 Tout d'abord, afin que votre ordinateur puisse reconaitre le BeagleBone, il faut installer les drivers adéquates. 
 
@@ -47,6 +47,24 @@ Password : temppwd
 
 Vous voilà à la racine du BBB. 
 
+2 - Configuration du BBB 
+
+A) Connexion Internet 
+Pour l'instant, votre BeagleBone n'est pas connecté à Internet (test ping 8.8.8.8). Pour configurer la connexion Internet, je vous conseil de suivre ce tutoriel : https://www.digikey.com/en/maker/blogs/how-to-connect-a-beaglebone-black-to-the-internet-using-usb 
+
+Deux choses sont importantes : 
+- Il faut ajouter une route par défaut pour dire au BBB par où sortir vers Internet : 
+
+sudo /sbin/route add default gw 192.168.7.1
+
+- Dans ce cas là, la connexion est établie mais le DNS ne marche pas. Avec cette commande, vous mettez à jour le DNS dans resolv.conf. 
+
+echo "nameserver 8.8.8.8" >> /etc/resolv.conf 
+
+NB : pensez bien à configurer le DNS sur votre carte Ethernet dans votre PC (ajoutez 8.8.8.8). Pour tester, ping google.com.
+
+B) Configuration des pins 
+
 
 
 
@@ -64,9 +82,9 @@ cmdline=coherent_pool=1M quiet net.ifnames=0 cape_universal=enable
 cape_disable=bone_capemgr.disable_partno=BB-BONELT-HDMI,BB-BONELT-HDMIN
 cape_enable=bone_capemgr.enable_partno=BB-SPIDEV0,BB-SPIDEV1
 #ENABLE UART
-cape_enable=capemgr.enable_partno=BB-UART1,BB-UART2,BB-UART4.BB-UART5
+cape_enable=bone_capemgr.enable_partno=BB-UART1,BB-UART2,BB-UART4,BB-UART5
 ...
-et redémarrez votre BBB
+et redémarrez votre BBB car comme ce fichier est un fichier système, le BBB ne le prendra en compte que lors du rédmarrage. 
 
 Vérifications :
 
